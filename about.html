@@ -48,16 +48,16 @@
             height: 20px;
         }
         /* 圖片容器及文字樣式 */
-        .hero-section {
+        .picture-section {
             position: relative;
             text-align: center;
             margin-top: 60px; /* 確保內容不被導航欄遮住 */
         }
-        .hero-section img {
+        .picture-section img {
             width: 100%;
             height: auto;
         }
-        .hero-section .text-overlay {
+        .picture-section .text-overlay {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -69,6 +69,11 @@
             font-size: 20px;
             font-weight: bold;
         }
+        .responsive-image {
+        width: 40%; /* 圖片寬度等於父容器 */
+        height: auto; /* 自動調整高度，保持比例 */
+        max-width: 600px; /* 最大寬度 */
+    }
         /* 主內容樣式 */
         .content {
             margin-top: 20px;
@@ -99,7 +104,7 @@
 
 
 <!-- 圖片及文字 -->
-    <div class="picture-section">
+    <div class="responsive-image">
         <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/1734042168811.jpg" alt="Profile Pic">
     </div>
     
