@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Bosco Hung</title>
+    <title>Bosco Hung</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+        /* 導航欄樣式 */
         .navbar {
             background-color: #333;
             overflow: hidden;
@@ -17,8 +18,11 @@
             top: 0;
             width: 100%;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .navbar a {
+        .navbar .links a {
             float: left;
             display: block;
             color: white;
@@ -26,11 +30,48 @@
             padding: 14px 20px;
             text-decoration: none;
         }
-        .navbar a:hover {
+        .navbar .links a:hover {
             background-color: #575757;
         }
+        .navbar .social-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .navbar .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .navbar .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+        /* 圖片容器及文字樣式 */
+        .hero-section {
+            position: relative;
+            text-align: center;
+            margin-top: 60px; /* 確保內容不被導航欄遮住 */
+        }
+        .hero-section img {
+            width: 100%;
+            height: auto;
+        }
+        .hero-section .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5); /* 背景透明度 */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /* 主內容樣式 */
         .content {
-            margin-top: 60px;
+            margin-top: 20px;
             padding: 20px;
         }
     </style>
@@ -38,9 +79,22 @@
 <body>
     <!-- 頂部導航欄 -->
     <div class="navbar">
-        <a href="/">Home</a>
-        <a href="about.html" style="background-color: #575757;">About</a>
-        <a href="#contact">Contact</a>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://twitter.com/boscohung_" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYIf4qwAVMeAZHL7QYa9s4aOEEiPVYha2HTQ&s" alt="Twitter">
+            </a>
+            <a href="https://www.linkedin.com/in/ho-ting-hung-080597222/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0PfCg2MEeeIQ1ce0dgspPBX3b2Y4AL1_lVg&s" alt="LinkedIn">
+            </a>
+            <a href="https://scholar.google.com/citations?user=OrutnAkAAAAJ&hl=en" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/2048px-Google_Scholar_logo.svg.png" alt="Google Scholar">
+            </a>
+        </div>
     </div>
 
     <!-- 主內容 -->
