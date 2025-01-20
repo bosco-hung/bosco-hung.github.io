@@ -67,10 +67,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            background-color: rgba(0, 0, 0, 0.5); /* 背景透明度 */
             padding: 10px 20px;
             border-radius: 5px;
-            font-size: 20px;
+            font-size: 40px;
             font-weight: bold;
         }
         .responsive-image {
@@ -82,6 +81,9 @@
         .content {
             margin-top: 20px;
             padding: 20px;
+        }
+        .dimmed-image {
+            filter: brightness(50%);
         }
     </style>
 </head>
@@ -109,7 +111,7 @@
 
     <!-- 圖片及文字 -->
     <div class="picture-section">
-        <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/DSCF3528.jpg" alt="Symposium">
+        <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/DSCF3528.jpg" alt="Symposium", class="dimmed-image">
         <div class="text-overlay">
             Ho Ting (Bosco) Hung <br>
             University of Oxford MPhil '26, LSE BSc '24
