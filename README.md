@@ -1,3 +1,14 @@
+---
+output:
+  rmdformats::downcute:
+    theme: default
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+---
+
 # Bosco Hung
 Bosco Hung is a Researcher interested in Chinese politics, emerging technology, and computational social science.
 
