@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
         }
-        /* 導航欄樣式 */
+        /* Navigation Bar Styles */
         .navbar {
             background-color: #333;
             overflow: hidden;
@@ -47,36 +47,19 @@
             width: 20px;
             height: 20px;
         }
-        /* 圖片容器及文字樣式 */
-        .picture-section {
-            position: relative;
-            text-align: center;
-            margin-top: 60px; /* 確保內容不被導航欄遮住 */
-        }
-        .picture-section img {
-            width: 100%;
-            height: auto;
-        }
-        .picture-section .text-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5); /* 背景透明度 */
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 20px;
-            font-weight: bold;
-        }
+        /* Profile Picture Section */
         .responsive-image {
-        width: 10%; /* 圖片寬度等於父容器 */
-        height: auto; /* 自動調整高度，保持比例 */
-        max-width: 300px; /* 最大寬度 */
-        align-items: center;
-        justify-content: center;
-    }
-        /* 主內容樣式 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px; /* Space below navbar */
+        }
+        .responsive-image img {
+            width: 20%; /* 20% of the screen width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%; /* Optional: Circular profile picture */
+        }
+        /* Content Styles */
         .content {
             margin-top: 20px;
             padding: 20px;
@@ -84,7 +67,7 @@
     </style>
 </head>
 <body>
-    <!-- 頂部導航欄 -->
+    <!-- Navigation Bar -->
     <div class="navbar">
         <div class="links">
             <a href="index.html">Home</a>
@@ -104,13 +87,12 @@
         </div>
     </div>
 
-
-<!-- 圖片及文字 -->
+    <!-- Profile Picture -->
     <div class="responsive-image">
-        <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/1734042168811.jpg" alt="Profile Pic">
+        <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/1734042168811.jpg" alt="Profile Picture">
     </div>
-    
-    <!-- 主內容 -->
+
+    <!-- Main Content -->
     <div class="content">
         <h1>About Bosco Hung</h1>
         <p>Bosco is an MPhil Candidate in International Relations at the University of Oxford (St Anne’s College). He graduated with a BSc in Politics and International Relations (first class honours) from the London School of Economics and Political Science (LSE). He is also a Hong Kong Scholarship for Excellence Scheme (HKSES) scholar and a Digital Sherlock Scholar at the NATO Atlantic Council Digital Forensic Research Lab.</p>
