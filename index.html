@@ -10,12 +10,6 @@
             margin: 0;
             padding: 0;
         }
-        /* 標題樣式 */
-        h1 {
-            font-family: Helvetica, Arial, sans-serif;
-            text-align: center;
-            margin-top: 20px;
-        }
         /* 導航欄樣式 */
         .navbar {
             background-color: #333;
@@ -24,8 +18,11 @@
             top: 0;
             width: 100%;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .navbar a {
+        .navbar .links a {
             float: left;
             display: block;
             color: white;
@@ -33,12 +30,48 @@
             padding: 14px 20px;
             text-decoration: none;
         }
-        .navbar a:hover {
+        .navbar .links a:hover {
             background-color: #575757;
+        }
+        .navbar .social-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .navbar .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .navbar .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+        /* 圖片容器及文字樣式 */
+        .hero-section {
+            position: relative;
+            text-align: center;
+            margin-top: 60px; /* 確保內容不被導航欄遮住 */
+        }
+        .hero-section img {
+            width: 100%;
+            height: auto;
+        }
+        .hero-section .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5); /* 背景透明度 */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
         }
         /* 主內容樣式 */
         .content {
-            margin-top: 60px; /* 確保內容不被導航欄遮住 */
+            margin-top: 20px;
             padding: 20px;
         }
     </style>
@@ -46,17 +79,37 @@
 <body>
     <!-- 頂部導航欄 -->
     <div class="navbar">
-        <a href="/">Home</a>
-        <a href="about.html">About</a>
-        <a href="#contact">Contact</a>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://twitter.com/boscohung_" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+            </a>
+            <a href="https://www.linkedin.com/in/ho-ting-hung-080597222/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+            </a>
+            <a href="https://scholar.google.com/citations?user=OrutnAkAAAAJ&hl=en" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.png" alt="Google Scholar">
+            </a>
+        </div>
+    </div>
+
+    <!-- 圖片及文字 -->
+    <div class="hero-section">
+        <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/DSCF3528.jpg" alt="Symposium">
+        <div class="text-overlay">
+            Ho Ting (Bosco) Hung <br>
+            University of Oxford MPhil '26, LSE BSc '24
+        </div>
     </div>
 
     <!-- 主內容 -->
     <div class="content">
-        <h1>Bosco Hung</h1>
+        <h1>Welcome</h1>
         <p>Bosco is an MPhil Candidate in International Relations at the University of Oxford (St Anne’s College). He graduated with a BSc in Politics and International Relations (first class honours) from the London School of Economics and Political Science (LSE). He is also a Hong Kong Scholarship for Excellence Scheme (HKSES) scholar and a Digital Sherlock Scholar at the NATO Atlantic Council Digital Forensic Research Lab.</p>
-        <p>Besides co-founding and leading a think tank Protopia Group, he has held research positions at numerous academic associations and geopolitical consultancies, such as the International Team for the Study of Security Verona, the Nicholas Spykman International Center for Geopolitical Analysis, the Global Studies Institute in Hong Kong, and London Politica. Recently, he has been interviewed by France 24, Al Jazeera and Asharq News to provide geopolitical analyses of China’s political economy and global politics.</p>
-        <p>He has written for the Journal of Computational Social Science, the Journal of Cyber Policy, The National Interest, UDN, Initium Media, The News Lens, and other peer-reviewed publications and magazines. His research was presented in the UK Parliament, the Oxford Hong Kong Forum, and other professional settings. His research interests focus on Sino-US relations, Chinese politics, computational social science, cognitive operations, and information warfare.</p>
     </div>
 </body>
 </html>
