@@ -89,7 +89,6 @@
             white-space: nowrap; /* Ensure all images stay in one row */
             display: flex; /* Use flexbox for horizontal alignment */
             flex-wrap: nowrap; /* Prevent images from wrapping to a new row */
-            animation: scroll 20s linear infinite; /* Smooth infinite scrolling */
             gap: 20px; /* Add spacing between images */
             background-color: #f9f4f1; /* Optional: Set background color */
             align-items: center; /* Vertically align images in the center */
@@ -97,6 +96,11 @@
             height: 150px; /* Set the fixed height for the banner */
             scrollbar-width: none; /* Hide scrollbar for Firefox */
             position: relative; /* Positioning for animation */
+        }
+        /* Scrolling Track */
+        .photo-banner-track {
+            display: flex;
+            animation: scroll 20s linear infinite; /* Create the scrolling animation */
         }
 
         /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
@@ -108,6 +112,7 @@
             height: 150px; /* Match the banner height */
             width: auto;
             object-fit: contain; /* Ensure the entire image is visible without cropping */
+            margin-right: 20px;
         }
         
         /* Infinite Scroll Animation */
@@ -167,30 +172,57 @@
         <br>
         <h2>My Ventures and Experience.</h2>
         <div class="photo-banner">
-            <a href="https://www.linkedin.com/company/oxford-computational-political-science-group" target="_blank">
-                <img class="first" src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/Logo-4.0.png" alt="OCPSG" />
-            </a>
-            <a href="https://futureimpact.group/" target="_blank">
-                <img src="https://images.squarespace-cdn.com/content/v1/66b76f76b16b026be85642ef/53a6669c-5bd2-45f5-99ee-c43fec6d20b7/FIG+Tree+L.png?format=1500w" alt="FIG">
-            </a>
-            <a href="https://www.itssverona.it/" target="_blank">
-                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGBMFkBMsWlSg/company-logo_200_200/company-logo_200_200/0/1665426780093/itss_verona_logo?e=2147483647&v=beta&t=Ixmpn-2VYUvy6Svvn9D1VdRrfgyX42O2y5zdyrOR9ew" alt="ITSS">
-            </a>
-            <a href="https://www.oxfordchinapolicylab.com/" target="_blank">
-                <img src="https://images.squarespace-cdn.com/content/v1/621a202ead90a37840386615/1711447944939-TCQA3BPWMB7RA4PEP0WE/bb.jpg" alt="OCPL">
-            </a>
-            <a href="https://www.protopiagroup.org/" target="_blank">
-                <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/Logo with words (purple).jpg" alt="Protopia">
-            </a>
-            <a href="https://dfrlab.org/digital-sherlocks/" target="_blank">
-                <img src="https://dfrlab.org/wp-content/uploads/sites/3/2021/10/360-Digital-Sherlocks_Final_Black-Teal-logo.png" alt="DFL">
-            </a>
-            <a href="https://londonpolitica.com/" target="_blank">
-                <img src="https://media.licdn.com/dms/image/v2/C4D0BAQEOplOEhRkEbg/company-logo_200_200/company-logo_200_200/0/1630556024323/london_politica_logo?e=2147483647&v=beta&t=E4F5_mCl1Z0sqUVkoKLeTU2FIi4VA3SXWQ_GKAJCGs4" alt="LP">
-            </a>
-            <a href="https://www.sant.ox.ac.uk/european-studies/european-studies-centre/" target="_blank">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL-XbWy9_6YJZkBDevYGHELASTIa8RpXDZcw&s" alt="STA">
-            </a>
+            <div class="photo-banner-track">
+                <a href="https://www.linkedin.com/company/oxford-computational-political-science-group" target="_blank">
+                    <img class="first" src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/Logo-4.0.png" alt="OCPSG" />
+                </a>
+                <a href="https://futureimpact.group/" target="_blank">
+                    <img src="https://images.squarespace-cdn.com/content/v1/66b76f76b16b026be85642ef/53a6669c-5bd2-45f5-99ee-c43fec6d20b7/FIG+Tree+L.png?format=1500w" alt="FIG">
+                </a>
+                <a href="https://www.itssverona.it/" target="_blank">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGBMFkBMsWlSg/company-logo_200_200/company-logo_200_200/0/1665426780093/itss_verona_logo?e=2147483647&v=beta&t=Ixmpn-2VYUvy6Svvn9D1VdRrfgyX42O2y5zdyrOR9ew" alt="ITSS">
+                </a>
+                <a href="https://www.oxfordchinapolicylab.com/" target="_blank">
+                    <img src="https://images.squarespace-cdn.com/content/v1/621a202ead90a37840386615/1711447944939-TCQA3BPWMB7RA4PEP0WE/bb.jpg" alt="OCPL">
+                </a>
+                <a href="https://www.protopiagroup.org/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/Logo with words (purple).jpg" alt="Protopia">
+                </a>
+                <a href="https://dfrlab.org/digital-sherlocks/" target="_blank">
+                    <img src="https://dfrlab.org/wp-content/uploads/sites/3/2021/10/360-Digital-Sherlocks_Final_Black-Teal-logo.png" alt="DFL">
+                </a>
+                <a href="https://londonpolitica.com/" target="_blank">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D0BAQEOplOEhRkEbg/company-logo_200_200/company-logo_200_200/0/1630556024323/london_politica_logo?e=2147483647&v=beta&t=E4F5_mCl1Z0sqUVkoKLeTU2FIi4VA3SXWQ_GKAJCGs4" alt="LP">
+                </a>
+                <a href="https://www.sant.ox.ac.uk/european-studies/european-studies-centre/" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL-XbWy9_6YJZkBDevYGHELASTIa8RpXDZcw&s" alt="STA">
+                </a>
+                <!-- Duplicate Set of Images for Infinite Scroll -->
+                <a href="https://www.linkedin.com/company/oxford-computational-political-science-group" target="_blank">
+                    <img class="first" src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/Logo-4.0.png" alt="OCPSG" />
+                </a>
+                <a href="https://futureimpact.group/" target="_blank">
+                    <img src="https://images.squarespace-cdn.com/content/v1/66b76f76b16b026be85642ef/53a6669c-5bd2-45f5-99ee-c43fec6d20b7/FIG+Tree+L.png?format=1500w" alt="FIG">
+                </a>
+                <a href="https://www.itssverona.it/" target="_blank">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGBMFkBMsWlSg/company-logo_200_200/company-logo_200_200/0/1665426780093/itss_verona_logo?e=2147483647&v=beta&t=Ixmpn-2VYUvy6Svvn9D1VdRrfgyX42O2y5zdyrOR9ew" alt="ITSS">
+                </a>
+                <a href="https://www.oxfordchinapolicylab.com/" target="_blank">
+                    <img src="https://images.squarespace-cdn.com/content/v1/621a202ead90a37840386615/1711447944939-TCQA3BPWMB7RA4PEP0WE/bb.jpg" alt="OCPL">
+                </a>
+                <a href="https://www.protopiagroup.org/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/Logo with words (purple).jpg" alt="Protopia">
+                </a>
+                <a href="https://dfrlab.org/digital-sherlocks/" target="_blank">
+                    <img src="https://dfrlab.org/wp-content/uploads/sites/3/2021/10/360-Digital-Sherlocks_Final_Black-Teal-logo.png" alt="DFL">
+                </a>
+                <a href="https://londonpolitica.com/" target="_blank">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D0BAQEOplOEhRkEbg/company-logo_200_200/company-logo_200_200/0/1630556024323/london_politica_logo?e=2147483647&v=beta&t=E4F5_mCl1Z0sqUVkoKLeTU2FIi4VA3SXWQ_GKAJCGs4" alt="LP">
+                </a>
+                <a href="https://www.sant.ox.ac.uk/european-studies/european-studies-centre/" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL-XbWy9_6YJZkBDevYGHELASTIa8RpXDZcw&s" alt="STA">
+                </a>
+            </div?
         </div>
         <br>
         <br>
