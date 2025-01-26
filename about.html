@@ -85,7 +85,8 @@
         
         /* Photo Banner Styles */
         .photo-banner {
-            overflow: scroll;
+            overflow-x: scroll;
+            white-space: nowrap; /* Prevent wrapping onto multiple rows */
             display: flex;
             gap: 20px;
             background-color: #f9f4f1; /* Optional: Set a background color */
@@ -94,10 +95,15 @@
             padding: 20px 0; /* Add spacing around the banner */
             animation: scroll 15s linear infinite;
             width: 100%;
-            white-space: nowrap; /* Prevent wrapping onto multiple rows */
             height: 150px; /* Set a fixed height for the banner */
             scrollbar-width: none; /* Hide scrollbar for Firefox */
         }
+
+        /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+        .photobanner-wrapper::-webkit-scrollbar {
+            display: none; /* Hides the scrollbar */
+        }
+        
         .photobanner img {
             height: 150px; /* Match the banner height */
         }
