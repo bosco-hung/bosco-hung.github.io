@@ -85,7 +85,7 @@
         
         /* Photo Banner Styles */
         .photo-banner {
-            overflow: hidden; /* Hide overflow to maintain a clean look */
+            overflow: scroll;
             display: flex;
             gap: 20px;
             background-color: #f9f4f1; /* Optional: Set a background color */
@@ -96,6 +96,7 @@
             width: 100%;
             white-space: nowrap; /* Prevent wrapping onto multiple rows */
             height: 150px; /* Set a fixed height for the banner */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
         }
         .photobanner img {
             height: 150px; /* Match the banner height */
