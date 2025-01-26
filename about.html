@@ -78,6 +78,31 @@
             margin-top: 20px;
             padding: 20px;
         }
+        /* Photo Banner Styles */
+        .photo-banner {
+            overflow: hidden; /* Hide overflow to maintain a clean look */
+            background-color: #f9f4f1; /* Optional: Set a background color */
+            padding: 20px 0; /* Add spacing around the banner */
+        }
+        .scroll-container {
+            display: flex;
+            width: max-content; /* Ensure the container grows with content */
+            animation: scroll 15s linear infinite; /* Add infinite scrolling animation */
+        }
+        .scroll-container img {
+            width: 200px; /* Set a uniform size for all images */
+            margin-right: 10px; /* Add spacing between images */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+        }
+        /* Infinite Scroll Animation */
+        @keyframes scroll {
+            from {
+                transform: translateX(0); /* Start at the beginning */
+            }
+            to {
+                transform: translateX(-100%); /* Move content out of view */
+            }
+        }
     </style>
 </head>
 <body>
@@ -93,6 +118,9 @@
             <strong style="font-family: Helvetica, Arial, sans-serif;">Bosco Hung</strong>
         </div>
         <div class="social-icons">
+            <a href="mailto:bosco.hung@politics.ox.ac.uk" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/54/54215.png" alt="Email">
+            </a>
             <a href="https://twitter.com/boscohung_" target="_blank">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxrN_tFAUk6DoOd_EgHHqz5cmi8YdvWW30Cw&s" alt="Twitter">
             </a>
@@ -119,6 +147,37 @@
         <p>Bosco is an MPhil Candidate in International Relations at the University of Oxford (St Anne’s College) and the Co-Founder of the Oxford Computational Political Science Group (OCPSG), a non-partisan research initiative based at the University of Oxford and supported by the Department of Politics and International Relations. He graduated with a BSc in Politics and International Relations (first class honours) from the London School of Economics and Political Science (LSE). He is also a Hong Kong Scholarship for Excellence Scheme (HKSES) scholar and a Digital Sherlock Scholar at the NATO Atlantic Council Digital Forensic Research Lab.</p>
         <p>Bosco is a Fellow at the Oxford China Policy Lab, a Fellow at the Oxford Group on AI Policy, and a Researcher at the International Team for the Study of Security Verona, at which he delivered research to members of the US Department of State, FBI, and USAID. He is now working on a research project on AI safety with the OECD. He has also held research positions at other geopolitical consultancies and research organizations like the Global Studies Institute of Hong Kong and London Politica. During his time at LSE, he served as the President of LSE's international affairs magazine The London Globalist and the Research Director of the LSE Undergraduate Political Review. Recently, he has been interviewed by France 24, Al Jazeera and Asharq News to provide geopolitical analyses of China’s political economy and global politics.</p>
         <p>He has written for the Journal of Computational Social Science, the Journal of Cyber Policy, The National Interest, UDN, Initium Media, The News Lens, and other peer-reviewed publications and magazines. His research was presented in the UK Parliament, the Oxford Hong Kong Forum, and other professional settings. His research interests focus on Sino-US relations, Chinese politics, computational social science, cognitive operations, and information warfare.</p>
+        <br>
+        <br>
+        <h2>My Ventures and Experience.</h2>
+        <div id="container">
+            <div class="photobanner">
+                <a href="https://www.linkedin.com/company/oxford-computational-political-science-group" target="_blank">
+                    <img class="first" src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/Logo-4.0.png" alt="OCPSG" />
+                </a>
+                <a href="https://futureimpact.group/" target="_blank">
+                    <img src="https://images.squarespace-cdn.com/content/v1/66b76f76b16b026be85642ef/53a6669c-5bd2-45f5-99ee-c43fec6d20b7/FIG+Tree+L.png?format=1500w" alt="FIG">
+                </a>
+                <a href="https://www.itssverona.it/" target="_blank">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGBMFkBMsWlSg/company-logo_200_200/company-logo_200_200/0/1665426780093/itss_verona_logo?e=2147483647&v=beta&t=Ixmpn-2VYUvy6Svvn9D1VdRrfgyX42O2y5zdyrOR9ew" alt="ITSS">
+                </a>
+                <a href="https://www.oxfordchinapolicylab.com/" target="_blank">
+                    <img src="https://images.squarespace-cdn.com/content/v1/621a202ead90a37840386615/1711447944939-TCQA3BPWMB7RA4PEP0WE/bb.jpg" alt="OCPL">
+                </a>
+                <a href="https://www.protopiagroup.org/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/images/Logo with words (purple).jpg" alt="Protopia">
+                </a>
+                <a href="https://dfrlab.org/digital-sherlocks/" target="_blank">
+                    <img src="https://dfrlab.org/wp-content/uploads/sites/3/2021/10/360-Digital-Sherlocks_Final_Black-Teal-logo.png" alt="DFL">
+                </a>
+                <a href="https://londonpolitica.com/" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqeIiCUsGG_aB7JjuZTNTu83WYVBg636X8aA&s" alt="LP">
+                </a>
+                <a href="https://www.sant.ox.ac.uk/european-studies/european-studies-centre/" target="_blank">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL-XbWy9_6YJZkBDevYGHELASTIa8RpXDZcw&s" alt="STA">
+                </a>
+            </div>
+        </div>
         <br>
         <br>
         <h2>My Awards.</h2>
