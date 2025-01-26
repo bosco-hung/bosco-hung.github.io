@@ -85,17 +85,15 @@
         
         /* Photo Banner Styles */
         .photo-banner {
-            overflow-x: scroll;
-            white-space: nowrap; /* Prevent wrapping onto multiple rows */
-            display: flex;
-            gap: 20px;
-            background-color: #f9f4f1; /* Optional: Set a background color */
-            align-items: center;
-            justify-content: flex-start; /* Align images to the start */
-            padding: 20px 0; /* Add spacing around the banner */
-            animation: scroll 15s linear infinite;
-            width: 100%;
-            height: 150px; /* Set a fixed height for the banner */
+            overflow-x: auto; /* Allow horizontal scrolling if images exceed container width */
+            white-space: nowrap; /* Ensure all images stay in one row */
+            display: flex; /* Use flexbox for horizontal alignment */
+            flex-wrap: nowrap; /* Prevent images from wrapping to a new row */
+            gap: 20px; /* Add spacing between images */
+            background-color: #f9f4f1; /* Optional: Set background color */
+            align-items: center; /* Vertically align images in the center */
+            padding: 0; /* Remove unnecessary padding */
+            height: 150px; /* Set the fixed height for the banner */
             scrollbar-width: none; /* Hide scrollbar for Firefox */
         }
         /* Ensure images stay in one row and do not wrap */
@@ -110,6 +108,7 @@
         
         .photobanner img {
             height: 150px; /* Match the banner height */
+            width: auto;
         }
         
         /* Infinite Scroll Animation */
