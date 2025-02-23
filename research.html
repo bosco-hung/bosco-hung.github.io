@@ -66,8 +66,44 @@
             margin: 50px 0; /* Add vertical spacing */
         }
 
+        /* Accordion*/
+        .accordion {
+            background-color: #faf8f7;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+            content: "\2212";
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+
         /*Footer */
         .footer{
+            background-color: #FFFFFF;
             margin-top: 20px;
             padding: 20px;
         }
@@ -105,50 +141,64 @@
     <div class="content">
         <h1 class="centered-heading">Research.</h1>
         <h2>Selected Publications.</h2>
-        <h3>2025</h3>
-        <ul>
-            <li>Hung, H. T. (2025). Multilateral cooperation in building critical infrastructure security and resilience: Case of American deterrence of Chinese cyberthreats. <i>Journal of Cyber Policy.</i> <a href="https://doi.org/10.1080/23738871.2024.2443421" target="_blank">https://doi.org/10.1080/23738871.2024.2443421</a></li>
-            <li>Hung, H. T. (2025). Exploring China’s cyber sovereignty concept and artificial intelligence governance model: A machine learning approach. <i>Journal of Computational Social Science, 8,</i> Article 25. <a href="https://doi.org/10.1007/s42001-024-00346-8" target="_blank">https://doi.org/10.1007/s42001-024-00346-8</a></li>
-        </ul>
-        <br>
-        <h3>2024</h3>
-        <ul>
-            <li>Lam, M. H. A., & Hung, H. T. (2024). Comparative analysis of the undergraduate political science research methodology course syllabi among Hong Kong universities.  <i>Journal of Political Science Education, 20</i>(4), 1–30. <a href="https://doi.org/10.1080/15512169.2024.2306325" target="_blank">https://doi.org/10.1080/15512169.2024.2306325</a></li>
-        </ul>
-        <br>
-        <h3>2022</h3>
-        <ul>
-            <li>Hung, H. T. (2022). A critical moment of Taiwan’s security – Taiwan has to sharpen its cybercapacity in response to China’s national rejuvenation.  <i>ITSS Magazine, 1</i>(2). </li>
-            <li>Hung, H. T. (2022). Keep your eyes on China’s metaverse: Another tool for maintaining its national security. <i>The Journal of Intelligence, Conflict, and Warfare, 5</i>(2), 1–31.  <a href="https://doi.org/10.21810/jicw.v5i2.4340" target="_blank">https://doi.org/10.21810/jicw.v5i2.4340</a> </li>
-            <li>Hung, H. T. (2022). Small city drawing great concerns: Hong Kong’s role in Sino-US relations. <i>Webster Review of International History, 2</i>(2), 61–87. <a href="https://websterreview.lse.ac.uk/7/volume/2/issue/2" target="_blank">https://websterreview.lse.ac.uk/7/volume/2/issue/2</a> </li>
-            <li>Hung, H. T. (2022). Distorting your perception of Russia’s aggression: How can we combat information warfare? <i>Connections: The Quarterly Journal, 21</i>(3), 37–61.  <a href="https://doi.org/10.11610/Connections.21.3.05" target="_blank">https://doi.org/10.11610/Connections.21.3.05</a> </li>
-        </ul>
+        <button class="accordion">2025</button>
+            <div class="panel">
+                <li>Hung, H. T. (2025). Multilateral cooperation in building critical infrastructure security and resilience: Case of American deterrence of Chinese cyberthreats. <i>Journal of Cyber Policy.</i> <a href="https://doi.org/10.1080/23738871.2024.2443421" target="_blank">https://doi.org/10.1080/23738871.2024.2443421</a></li>
+                <li>Hung, H. T. (2025). Exploring China’s cyber sovereignty concept and artificial intelligence governance model: A machine learning approach. <i>Journal of Computational Social Science, 8,</i> Article 25. <a href="https://doi.org/10.1007/s42001-024-00346-8" target="_blank">https://doi.org/10.1007/s42001-024-00346-8</a></li>
+            </div>
+        <button class="accordion">2024</button>
+            <div class="panel">
+                <li>Lam, M. H. A., & Hung, H. T. (2024). Comparative analysis of the undergraduate political science research methodology course syllabi among Hong Kong universities.  <i>Journal of Political Science Education, 20</i>(4), 1–30. <a href="https://doi.org/10.1080/15512169.2024.2306325" target="_blank">https://doi.org/10.1080/15512169.2024.2306325</a></li>
+            </div>
+        <button class="accordion">2022</button>
+            <div class="panel">
+                <li>Hung, H. T. (2022). A critical moment of Taiwan’s security – Taiwan has to sharpen its cybercapacity in response to China’s national rejuvenation.  <i>ITSS Magazine, 1</i>(2). </li>
+                <li>Hung, H. T. (2022). Keep your eyes on China’s metaverse: Another tool for maintaining its national security. <i>The Journal of Intelligence, Conflict, and Warfare, 5</i>(2), 1–31.  <a href="https://doi.org/10.21810/jicw.v5i2.4340" target="_blank">https://doi.org/10.21810/jicw.v5i2.4340</a> </li>
+                <li>Hung, H. T. (2022). Small city drawing great concerns: Hong Kong’s role in Sino-US relations. <i>Webster Review of International History, 2</i>(2), 61–87. <a href="https://websterreview.lse.ac.uk/7/volume/2/issue/2" target="_blank">https://websterreview.lse.ac.uk/7/volume/2/issue/2</a> </li>
+                <li>Hung, H. T. (2022). Distorting your perception of Russia’s aggression: How can we combat information warfare? <i>Connections: The Quarterly Journal, 21</i>(3), 37–61.  <a href="https://doi.org/10.11610/Connections.21.3.05" target="_blank">https://doi.org/10.11610/Connections.21.3.05</a> </li>
+            </div>
         <br>
         <br>
         <h2>Reports.</h2>
-        <h3>2024</h3>
-        <ul>
-            <li>Zulhilmi, M., & Hung, H. T. (2024). <i>A comparative study between the Department of Government and Department of Management students’ attitudes to the use of generative AI and academic integrity. </i>LSE.  <a href="https://info.lse.ac.uk/current-students/skills-and-opportunities/assets/documents/Change-makers/research-archive/2023-24/13-attitudes-to-the-use-of-generative-AI-and-academic-integrity-SUMMARY.pdf" target="_blank">https://info.lse.ac.uk/current-students/skills-and-opportunities/assets/documents/Change-makers/research-archive/2023-24/13-attitudes-to-the-use-of-generative-AI-and-academic-integrity-SUMMARY.pdf</a> </li>
-            <li>Hung, H. T. (2024). Country Report: France. In M. Groppi, I. Senfter & S. M. Girón (Eds.), <i>The Rise of the Far-Right in Europe: Mapping Groups, Narratives, and Trends in Europe’s Far-Right Landscape</i> (pp. 15-26). ITSS Verona. <a href="https://www.itssverona.it/wp-content/uploads/2024/06/Far-Right-Final.pdf" target="_blank">https://www.itssverona.it/wp-content/uploads/2024/06/Far-Right-Final.pdf</a> </li>
-        </ul>
+        <button class="accordion">2024</button>
+            <div class="panel">
+                <li>Zulhilmi, M., & Hung, H. T. (2024). <i>A comparative study between the Department of Government and Department of Management students’ attitudes to the use of generative AI and academic integrity. </i>LSE.  <a href="https://info.lse.ac.uk/current-students/skills-and-opportunities/assets/documents/Change-makers/research-archive/2023-24/13-attitudes-to-the-use-of-generative-AI-and-academic-integrity-SUMMARY.pdf" target="_blank">https://info.lse.ac.uk/current-students/skills-and-opportunities/assets/documents/Change-makers/research-archive/2023-24/13-attitudes-to-the-use-of-generative-AI-and-academic-integrity-SUMMARY.pdf</a> </li>
+                <li>Hung, H. T. (2024). Country Report: France. In M. Groppi, I. Senfter & S. M. Girón (Eds.), <i>The Rise of the Far-Right in Europe: Mapping Groups, Narratives, and Trends in Europe’s Far-Right Landscape</i> (pp. 15-26). ITSS Verona. <a href="https://www.itssverona.it/wp-content/uploads/2024/06/Far-Right-Final.pdf" target="_blank">https://www.itssverona.it/wp-content/uploads/2024/06/Far-Right-Final.pdf</a> </li>
+            </div>
         <br>
         <br>
         <h2>Presentations.</h2>
-        <h3>2024</h3>
-        <ul>
-            <li>British Conference of Undergraduate Research. London, United Kingdom.</li>
-            <li>Posters in Parliament. London, United Kingdom. <a href="https://info.lse.ac.uk/staff/divisions/Eden-Centre/Eden-events-and-programmes/Posters-in-Parliament", target="_blank"> Click here to see the poster.</a></li>
-        </ul>
-        <br>
-        <h3>2022</h3>
-        <ul>
-            <li>Oxford Hong Kong Forum, Oxford, United Kingdom.</li>
-        </ul>
+        <button class="accordion">2024</button>
+            <div class="panel">
+                <li>British Conference of Undergraduate Research. London, United Kingdom.</li>
+                <li>Posters in Parliament. London, United Kingdom. <a href="https://info.lse.ac.uk/staff/divisions/Eden-Centre/Eden-events-and-programmes/Posters-in-Parliament", target="_blank"> Click here to see the poster.</a></li>
+            </div>
+        <button class="accordion">2022</button>
+            <div class="panel">
+                <li>Oxford Hong Kong Forum, Oxford, United Kingdom.</li>
+            </div>
     </div> 
 
     <div class="footer">
         <h1>Bosco Hung.</h1>
         <p>bosco.hung[at]politics.ox.ac.uk</p>
     </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
 </body>
 </html>
