@@ -89,6 +89,40 @@
             margin: 50px 0; /* Add vertical spacing */
         }
 
+        /* Accordion*/
+        .accordion {
+            background-color: #faf8f7;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+            content: "\2212";
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
         /*Footer */
         .footer{
             margin-top: 20px;
@@ -133,33 +167,56 @@
         <br>
         <br>
         <h2>Selected English Analysis.</h2>
-        <h3>2024</h3>
-        <ul>
-            <li>Hung, H. T. (2024, July 15). On the horns of a dilemma, again! China’s uncomfortable position in the Moscow-Pyongyang Cooperation. <i>ITSS Verona.</i> <a href="https://www.itssverona.it/on-the-horns-of-a-dilemma-again-chinas-uncomfortable-position-in-the-moscow-pyongyang-cooperation" target="_blank">https://www.itssverona.it/on-the-horns-of-a-dilemma-again-chinas-uncomfortable-position-in-the-moscow-pyongyang-cooperation </a></li>
-        </ul>
-        <br>
-        <h3>2023</h3>
-        <ul>
-            <li>Hung, H. T. (2023, May 30). Can China Escape the Malacca Dilemma?  <i>The National Interest.</i> <a href="https://nationalinterest.org/feature/can-china-escape-malacca-dilemma-206505?page=0%2C1" target="_blank">https://nationalinterest.org/feature/can-china-escape-malacca-dilemma-206505?page=0%2C1 </a></li>
-        </ul>
+        <button class="accordion">2024</button>
+            <div class="panel">
+                <ul>
+                    <li>Hung, H. T. (2024, July 15). On the horns of a dilemma, again! China’s uncomfortable position in the Moscow-Pyongyang Cooperation. <i>ITSS Verona.</i> <a href="https://www.itssverona.it/on-the-horns-of-a-dilemma-again-chinas-uncomfortable-position-in-the-moscow-pyongyang-cooperation" target="_blank">https://www.itssverona.it/on-the-horns-of-a-dilemma-again-chinas-uncomfortable-position-in-the-moscow-pyongyang-cooperation </a></li>
+                </ul>
+            </div>
+        <button class="accordion">2023</button>
+            <div class="panel">
+                <ul>
+                    <liHung, H. T. (2023, May 30). Can China Escape the Malacca Dilemma?  <i>The National Interest.</i> <a href="https://nationalinterest.org/feature/can-china-escape-malacca-dilemma-206505?page=0%2C1" target="_blank">https://nationalinterest.org/feature/can-china-escape-malacca-dilemma-206505?page=0%2C1 </a></a></li>
+                </ul>
+            </div>
         <br>
         <br>
         <h2>Selected Chinese Analysis.</h2>
-        <h3>2024</h3>
-        <ul>
-            <li>Hung, H. T. (2024, July 9). The United States and France are facing political chaos. Can the new Labor government take the opportunity to restore Britain's global status? [Měi fǎ miànlín zhèngzhì luàn jú, gōngdǎng xīn zhèngfǔ néng fǒu jí jī chóng zhèn yīngguó quánqiú dìwèi?]. <i>The News Lens.</i> <a href="https://www.thenewslens.com/article/204929" target="_blank">https://www.thenewslens.com/article/204929</a> </li>
-        </ul>
-        <br>
-        <h3>2023</h3>
-        <ul>
-            <li>Hung, H. T. (2023, March 27). Why is French pension reform deadlocked? What mistakes did Macron make? [Fàguó tuìxiū jīn gǎigé wèihé shì sǐ jú? Mǎkè lóng fànle shénme cuò?]. <i>Initium Media.</i> <a href="https://theinitium.com/article/20230327-opinion-france-retirement-protest/" target="_blank">https://theinitium.com/article/20230327-opinion-france-retirement-protest/</a></li>
-            <li>Hung, H. T. (2023, March 23). The Brutal Wagner Group: The Mercenary Who Was Sacrificed by Putin? Can International Sanctions Address Its Rise? [Wǎgénà jítuán de xiōngcán zhī lù: Bèi pǔ dīng xīshēng de sòngsǐ yōngbīng? Guójì néng fǒu zhìcái dǎjí?]. <i>UDN.</i> <a href="https://global.udn.com/global_vision/story/8663/7050753" target="_blank">https://global.udn.com/global_vision/story/8663/7050753</a></li>
-        </ul>
+        <button class="accordion">2024</button>
+            <div class="panel">
+                <ul>
+                    <li>Hung, H. T. (2024, July 9). The United States and France are facing political chaos. Can the new Labor government take the opportunity to restore Britain's global status? [Měi fǎ miànlín zhèngzhì luàn jú, gōngdǎng xīn zhèngfǔ néng fǒu jí jī chóng zhèn yīngguó quánqiú dìwèi?]. <i>The News Lens.</i> <a href="https://www.thenewslens.com/article/204929" target="_blank">https://www.thenewslens.com/article/204929</a></li>
+                </ul>
+            </div>
+        <button class="accordion">2023</button>
+            <div class="panel">
+                <ul>
+                    <li>Hung, H. T. (2023, March 27). Why is French pension reform deadlocked? What mistakes did Macron make? [Fàguó tuìxiū jīn gǎigé wèihé shì sǐ jú? Mǎkè lóng fànle shénme cuò?]. <i>Initium Media.</i> <a href="https://theinitium.com/article/20230327-opinion-france-retirement-protest/" target="_blank">https://theinitium.com/article/20230327-opinion-france-retirement-protest/</a></li>
+                    <li>Hung, H. T. (2023, March 23). The Brutal Wagner Group: The Mercenary Who Was Sacrificed by Putin? Can International Sanctions Address Its Rise? [Wǎgénà jítuán de xiōngcán zhī lù: Bèi pǔ dīng xīshēng de sòngsǐ yōngbīng? Guójì néng fǒu zhìcái dǎjí?]. <i>UDN.</i> <a href="https://global.udn.com/global_vision/story/8663/7050753" target="_blank">https://global.udn.com/global_vision/story/8663/7050753</a></li>
+                </ul>
+            </div>
     </div>
 
     <div class="footer">
         <h1>Bosco Hung.</h1>
         <p>bosco.hung[at]politics.ox.ac.uk</p>
     </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
 </body>
 </html>
