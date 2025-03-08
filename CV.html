@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosco Hung</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f4f1;
+        }
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: #FFFFFF; /* Set navbar background to white */
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0; /* Add subtle border for separation */
+            font-family: Helvetica, Arial, sans-serif; /* Set font to Helvetica */
+        }
+        .navbar .links a {
+            float: left;
+            display: block;
+            color: #333333; /* Set text color to dark gray */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold; /* Optional: Make the text bold */
+        }
+        .navbar .links a:hover {
+            background-color: #f5f5f5; /* Subtle hover effect with light gray */
+        }
+        .navbar .social-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .navbar .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .navbar .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+        .navbar .logo {
+            position: absolute; /* Position the logo independently */
+            left: 50%; /* Move the logo to the horizontal center */
+            transform: translateX(-50%); /* Adjust to perfectly center */
+        }
+        /* 主內容樣式 */
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .centered-heading {
+            text-align: center;
+            margin: 50px 0; /* Add vertical spacing */
+        }
+
+        /* Accordion*/
+        .accordion {
+            background-color: #faf8f7;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+            content: "\2212";
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+
+        /*Footer */
+        .footer{
+            background-color: #FFFFFF;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        /*PDF */
+        .pdf {
+          width: 100%;
+          aspect-ratio: 4 / 3;
+        }
+  
+        .pdf,
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 頂部導航欄 -->
+    <div class="navbar">
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="CV.html">CV</a>
+            <a href="research.html">Research</a>
+            <a href="analysis.html">Analysis</a>
+        </div>
+        <div class="logo">
+            <strong style="font-family: Helvetica, Arial, sans-serif;">Bosco Hung</strong>
+        </div>
+        <div class="social-icons">
+            <a href="mailto:bosco.hung@politics.ox.ac.uk" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/54/54215.png" alt="Email">
+            </a>
+            <a href="https://twitter.com/boscohung_" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxrN_tFAUk6DoOd_EgHHqz5cmi8YdvWW30Cw&s" alt="Twitter">
+            </a>
+            <a href="https://www.linkedin.com/in/ho-ting-hung-080597222/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKWAPPzeDqd1lCcOWfzeZhWMffptt8f-k88A&s" alt="LinkedIn">
+            </a>
+            <a href="https://scholar.google.com/citations?user=OrutnAkAAAAJ&hl=en" target="_blank">
+                <img src="https://www.svgrepo.com/show/306145/googlescholar.svg" alt="Google Scholar">
+            </a>
+        </div>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="content">
+        <h1 class="centered-heading">Curriculum Vitæ.</h1>
+        <br>
+        <object class="pdf" 
+              data="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/PDF/CV.pdf"
+              width="800"
+              height="500">
+        </object>
+    </div> 
+
+    <div class="footer">
+        <h1>Bosco Hung.</h1>
+        <p>bosco.hung[at]politics.ox.ac.uk</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+</body>
+</html>
