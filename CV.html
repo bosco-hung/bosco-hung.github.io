@@ -56,34 +56,11 @@
             left: 50%; /* Move the logo to the horizontal center */
             transform: translateX(-50%); /* Adjust to perfectly center */
         }
-        /* 圖片容器及文字樣式 */
-        .hero-section {
-            position: relative;
-            text-align: center;
-            margin-top: 60px; /* 確保內容不被導航欄遮住 */
-        }
-        .hero-section img {
-            width: 100%;
-            height: auto;
-        }
-        .hero-section .text-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5); /* 背景透明度 */
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 20px;
-            font-weight: bold;
-        }
         /* 主內容樣式 */
         .content {
             margin-top: 20px;
             padding: 20px;
         }
-        /* Center the h1 Text */
         .centered-heading {
             text-align: center;
             margin: 50px 0; /* Add vertical spacing */
@@ -123,11 +100,26 @@
             transition: max-height 0.2s ease-out;
         }
 
+
         /*Footer */
         .footer{
-            background-color: #FFFFFF; 
+            background-color: #FFFFFF;
             margin-top: 20px;
             padding: 20px;
+        }
+
+        /*PDF */
+        .pdf {
+          width: 100%;
+          aspect-ratio: 4 / 3;
+        }
+  
+        .pdf,
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -162,42 +154,14 @@
 
     <!-- 主內容 -->
     <div class="content">
-        <h1 class="centered-heading">Analysis.</h1>
-        <h2>Media Appearance.</h2>  
-        <p>Bosco has been regularly interviewed by France 24, Al Jazeera, and other media outlets to provide geopolitical analyses.</p>
-        <p>His most recent analysis can be found on <a href="https://www.france24.com/fr/%C3%A9co-tech/20240901-black-myth-wukong-jeu-video-chine-succes-nationalisme-technologique-soft-power" target="_blank">France 24</a>.</p>
+        <h1 class="centered-heading">Curriculum Vitæ.</h1>
         <br>
-        <br>
-        <h2>Selected English Analysis.</h2>
-        <button class="accordion">2024</button>
-            <div class="panel">
-                <ul>
-                    <li>Hung, H. T. (2024, July 15). On the horns of a dilemma, again! China’s uncomfortable position in the Moscow-Pyongyang Cooperation. <i>ITSS Verona.</i> <a href="https://www.itssverona.it/on-the-horns-of-a-dilemma-again-chinas-uncomfortable-position-in-the-moscow-pyongyang-cooperation" target="_blank">https://www.itssverona.it/on-the-horns-of-a-dilemma-again-chinas-uncomfortable-position-in-the-moscow-pyongyang-cooperation </a></li>
-                </ul>
-            </div>
-        <button class="accordion">2023</button>
-            <div class="panel">
-                <ul>
-                    <li>Hung, H. T. (2023, May 30). Can China Escape the Malacca Dilemma?  <i>The National Interest.</i> <a href="https://nationalinterest.org/feature/can-china-escape-malacca-dilemma-206505?page=0%2C1" target="_blank">https://nationalinterest.org/feature/can-china-escape-malacca-dilemma-206505?page=0%2C1</a></li>
-                </ul>
-            </div>
-        <br>
-        <br>
-        <h2>Selected Chinese Analysis.</h2>
-        <button class="accordion">2024</button>
-            <div class="panel">
-                <ul>
-                    <li>Hung, H. T. (2024, July 9). The United States and France are facing political chaos. Can the new Labor government take the opportunity to restore Britain's global status? [Měi fǎ miànlín zhèngzhì luàn jú, gōngdǎng xīn zhèngfǔ néng fǒu jí jī chóng zhèn yīngguó quánqiú dìwèi?]. <i>The News Lens.</i> <a href="https://www.thenewslens.com/article/204929" target="_blank">https://www.thenewslens.com/article/204929</a></li>
-                </ul>
-            </div>
-        <button class="accordion">2023</button>
-            <div class="panel">
-                <ul>
-                    <li>Hung, H. T. (2023, March 27). Why is French pension reform deadlocked? What mistakes did Macron make? [Fàguó tuìxiū jīn gǎigé wèihé shì sǐ jú? Mǎkè lóng fànle shénme cuò?]. <i>Initium Media.</i> <a href="https://theinitium.com/article/20230327-opinion-france-retirement-protest/" target="_blank">https://theinitium.com/article/20230327-opinion-france-retirement-protest/</a></li>
-                    <li>Hung, H. T. (2023, March 23). The Brutal Wagner Group: The Mercenary Who Was Sacrificed by Putin? Can International Sanctions Address Its Rise? [Wǎgénà jítuán de xiōngcán zhī lù: Bèi pǔ dīng xīshēng de sòngsǐ yōngbīng? Guójì néng fǒu zhìcái dǎjí?]. <i>UDN.</i> <a href="https://global.udn.com/global_vision/story/8663/7050753" target="_blank">https://global.udn.com/global_vision/story/8663/7050753</a></li>
-                </ul>
-            </div>
-    </div>
+        <object class="pdf" 
+              data="https://raw.githubusercontent.com/bosco-hung/boscohung.github.io/main/PDF/CV.pdf"
+              width="800"
+              height="500">
+        </object>
+    </div> 
 
     <div class="footer">
         <h1>Bosco Hung.</h1>
